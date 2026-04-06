@@ -14,7 +14,6 @@ class NullNotifier:
         # TODO: implementar un notifier que no haga nada
         pass
 
-
 def test_create_order_with_real_api():
     db = SessionLocal()
     order = create_order(1, 100, NullNotifier(), DummyLogger(), db, JsonPlaceholderUserRepository())
