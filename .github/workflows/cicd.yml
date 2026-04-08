@@ -23,6 +23,3 @@ jobs:
         run: |
             export PYTHONPATH=$GITHUB_WORKSPACE
             pytest orders_app/test_integration_with_fake.py -v                                           
-
-      - name: Build
-        run: python app.py
