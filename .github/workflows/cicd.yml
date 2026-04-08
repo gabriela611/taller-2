@@ -20,7 +20,8 @@ jobs:
         run: pip install -r orders_app/requirements.txt
 
       - name: Test
-        run: pytest test_integration_with_fake.py -v                                             
+        run: export PYTHONPATH-$GITHUB_WORKSPACE 
+            pytest orders_app/test_integration_with_fake.py -v                                             
 
       - name: Build
         run: python app.py
